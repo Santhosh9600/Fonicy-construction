@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constrution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body {
+        background: white;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: black;
+        height: 67px;
+    }
+
+    .flag {
+        display: flex;
+        gap: 15px;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+
+    .flag img {
+        margin-top: 2px;
+        text-align: center;
+        border: solid 1px #fff;
+        background-color: #fff;
+        border-width: 10px 12px 10px 12px;
+    }
+
+    .flag p {
+
+        margin-top: 15px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .about {
+        display: flex;
+        gap: 144px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .about h5 {
+        margin-left: 20px;
+        color: #fff;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .about i {
+        border: solid 1px #fff;
+        background-color: #fff;
+        color: orangered;
+        padding-right: 13px;
+        border-width: 6px 16px 6px 9px;
+
+
+    }
+
+    .head-icons {
+        display: flex;
+        padding-right: 30px;
+        gap: 10px;
+        font-size: 21px;
+        color: orangered;
+        margin-top: 12px;
+    }
+
+    .face {
+        border: solid 1px black;
+        background-color: #fff;
+        border-width: 6px 8px 24px 6px;
+    }
+
+    .face i {
+        margin-top: 5px;
+    }
+
+    .twitter {
+        border: solid 1px black;
+        background-color: white;
+        border-width: 6px 8px 24px 6px;
+    }
+
+    .twitter i {
+        margin-top: 5px;
+    }
+
+    .link {
+        border: solid 1px black;
+        background-color: white;
+        border-width: 6px 8px 24px 6px;
+    }
+
+    .link i {
+        margin-top: 5px;
+    }
+
+    .insta {
+        border: solid 1px black;
+        background-color: white;
+        border-width: 6px 8px 24px 6px;
+    }
+
+    .insta i {
+        margin-top: 5px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .logo {
+        padding-left: 38px;
+    }
+
+    nav {
+        margin-left: -80px;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 22px;
+
+    }
+
+    nav a {
+        text-decoration: none;
+        padding-left: 55px;
+        color: black;
+    }
+
+    .active {
+         padding-right: 50px; 
+        border: solid 1px black;
+        background-color: black;
+        color: #fff;
+        border-width: 10px 1px 10px 0px;
+        margin-left: 60px;
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        padding-right: 20px;
+        border: solid 1px black;
+        background-color: black;
+        border-width: 10px 1px 10px 0px;
+        color: #fff;
+        transition: 0.3s;
+    }
+
+    nav i {
+        padding-left: 52px;
+    }
+
+    .nav-btn {
+        margin-top: 10px;
+        margin-right: 40px;
+        width: 170px;
+        height: 44px;
+        color: white;
+        background-color: orangered;
+        font-weight: 530;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .hero-contant {
+        margin-top: -570px;
+        color: #fff;
+        font-size: 27px;
+        padding-left: 220px;
+    }
+
+    .hero-btn {
+        display: flex;
+        gap: 25px;
+        margin-left: 228px;
+        margin-top: 45px;
+    }
+
+    .contact-btn {
+        width: 230px;
+        height: 60px;
+        color: #fff;
+        background-color: orange;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 400;
+        border: none;
+    }
+
+    .about-btn {
+        width: 230px;
+        height: 60px;
+        color: #fff;
+        background-color: black;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 400;
+        border: none;
+    }
+
+    .loading {
+        margin-top: 60px;
+        padding-left: 780px;
+    }
+
+    .service {
+        padding: 50px;
+        box-shadow: 50px solid black;
+        box-shadow: 0 4px 20px black;
+        margin-top: 60px;
+        width: 1620px;
+        margin-left: 30px;
+        border: none;
+        /* border: 3px solid #c2c0c0; */
+        border-radius: 5px;
+    }
+
+    .service h1 {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .service p {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .service-container {
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .service-box {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .service-box img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .service-box img:hover
+    {
+         transition: 0.3s;
+        color: black;
+       
+    }
+
+    .service-box h2 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .service-box p {
+        padding-top: -10px;
+      
+       font-size: 18px;
+        margin-bottom: 10px;
+
+    }
+    .service-box h6
+    {
+        margin-top: 25px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .about-1
+    {
+        display: flex;
+    }
+
+    .about-contant
+    {
+        margin-top: 140px;
+        margin-left: -24px;
+    }
+
+    .about-contant h1
+    {
+        font-size: 38px;
+        margin-left: -248px;
+    }
+
+    .about-contant p
+    {
+        margin-left: 130px;
+        font-size: 23px;
+        text-align: justify;
+        color: black;
+        line-height: 30px;
+        width:820px;
+        font-family: sans-serif;
+    }
+
+    .about-1 button
+    {
+        margin-top: 40px;
+        width: 180px;
+        height: 48px;
+        color: #fff;
+        background-color: orangered;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    .about-img
+    {
+        margin-right: 80px;
+        padding: 50px;
+        margin-top: 30px;
+    }
+   
+    .project
+    {
+        margin-top: 120px;
+    }
+
+    .project h1
+    {
+        padding-left: 150px;
+        font-size: 38px;
+    }
+
+    .project p
+    {
+        margin-top: 20px;
+    }
+
+    .category 
+    {
+        display: flex;
+        gap:90px;
+        margin-left: 150px;
+        margin-top: 35px;
+    }
+
+    .category h5
+    {
+        border: solid 1px black;
+        background-color: black;
+        color: #fff;
+        border-width: 10px 12px 10px 12px;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    .category span
+    {
+        color: orangered;
+        font-size: 18px;
+        margin-top: 43px;
+    }
+    .category p
+    {
+        margin-top:32px;
+        font-size: 18px;
+        padding-top:10px;
+    }
+
+    .project-container
+    {
+        display: flex;
+        gap:60px
+    }
+
+    .project-img
+    {
+        padding-left: 150px;
+        margin-top: 40px;
+        gap: 190px;
+    }
+
+    .project-img-2
+    {
+        margin-top:40px;
+        
+        /* padding: 10px; */
+         border: solid 1px black;
+         width: 390px;
+         height: 490px;
+         background-color: orangered;
+         color: #fff;
+         border: none;
+         border-radius: 4px;
+    }
+
+    .project-img-2 h3
+    {
+        padding-left: 5px;
+        padding-top: 10px;
+        font-size: 24px;
+    }
+
+    .project-img-2 p
+    {
+        display: flex;
+        flex-wrap: wrap;
+        width: 410px;
+        font-size: 18px;
+        line-height:30px;
+        padding-left: 5px;
+    }
+
+    .project-img-3
+    {
+        margin-top: 40px;
+    }
+
+    .next-icon
+    {
+        margin-top: 60px;
+        font-size: 30px;
+        font-weight: bolder;
+        margin-left: 730px;
+        padding: 10px;
+        border: solid 1px black;
+        background-color: black;
+        color: #fff;
+        width: 110px;
+        height: 60px;
+        border-radius: 2px;
+    }
+
+    .testimonials
+    {
+    background-image: url(images/constrution/client-bg.jpg);
+    width: 100%;
+    height: 718px;
+    }
+
+    .testimonials img
+    {
+        border-radius: 5px;
+        padding-top: 120px;
+        margin-left: 170px;
+    }
+    .test-img h1
+    {
+      padding-top: 90px; 
+      color: #fff;
+      text-align: center;
+    }
+
+    .test-con
+    {
+        margin-left: 280px;
+        margin-top: -180px;
+        border: 1px solid black;
+        background-color:#ccc;
+        height: 280px;
+        width: 1220px;
+    }
+
+    .test-con h1
+    {
+        padding-top: 40px;
+        margin-left: 80px;
+        font-size: 28px;
+    }
+
+    .test-con h5
+    {
+        margin-top: 8px;
+        margin-left: 80px;
+        color: orangered;
+        font-size: 18px;
+    }
+    
+    .test-con p
+    {
+        text-align: justify;
+        width: 1080px;
+        margin-left: 80px;
+        padding-top: 30px;
+        line-height: 35px;
+    }
+
+    .load-2
+    {
+        margin-top: -120px;
+        border-radius: -20px;
+        margin-left:780px ;
+    }
+
+    .projects
+    {
+        margin-top: 150px;
+    }
+
+    .projects h1
+    {
+        font-weight: bolder;
+        font-size: 38px;
+        margin-left: 110px;
+    }
+
+    .project-content
+    {
+        width: 1310px;
+        margin-left: 340px;
+        margin-top: 60px;
+    }
+
+    .project-content h4
+    {
+        font-size: 23px;
+        width: 520px;
+        font-weight: bold;
+    }
+
+
+    .project-content p
+    {
+        font-size: 19px;
+    }
+
+    .project-content img
+    {
+       margin-bottom: -150px;
+       border: solid 1px orangered;
+       margin-left: -230px;
+       background-color: orangered;
+       border-width: 30px 50px 30px 50px;
+    }
+
+    .why-btn
+    {
+        margin-top: 50px;
+        width: 180px;
+        height: 48px;
+        color: #fff;
+        background-color: orangered;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-left: 840px;
+    }
+
+
+    .contact-us
+    {
+        display: flex;   
+        justify-content: space-between; 
+        padding: 50px;
+    }
+
+    .contact-form 
+    {
+        margin-left: 130px;
+    }
+
+   .contact-form h1
+    {
+        color: #1b2152;
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    .contact-form input
+    {
+        font-weight: bold;
+        border: 1px solid #dcdcdc;
+        box-shadow: 0 4px 20px  #dcdcdc ;
+        padding: 12px;
+        margin: 10px ;
+        width: 600px;
+        border: none;
+    }
+
+    .form-message
+    {
+        height: 120px;
+    }
+
+     .form-btn input
+    {
+        margin-top: 30px;
+        background-color: orangered;
+        width: 160px;
+        height: 45px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50px;
+        margin-left: 12px;
+    } 
+    .map
+    {
+        margin-top: 87px;
+    }
+
+    .footer
+    {
+       background-color: #1b2152;
+       height: 560px;
+    }
+
+    .footer-1
+    {   
+        display: flex;
+       padding-top: 60px;
+        color: #fff;   
+        font-size: 18px;
+        margin-left: 300px;  
+    }
+
+   .footer-1 p
+   {
+     margin-right: 310px;
+     font-size: 20px;
+   }
+
+   .footer-1 i
+   {
+    font-size: 26px;
+    padding-left: 80px;
+   }
+
+   .location-icon p 
+   {
+    margin-right: 310px;
+     font-size: 23px;
+   }
+
+   .location-icon i
+   {
+    padding-left: 25px;
+   }
+
+   .footer-2
+   {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 80px;
+   }
+
+   .quick
+   {
+    flex-wrap: wrap;
+    margin-left: 170px;
+    margin-top: 5px;
+   }
+
+   .quick h3
+   {
+    font-weight: bold;
+    font-size: 26px;
+    padding-bottom: 20px;
+   }
+
+   .quick p
+   {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 14px;
+   }
+
+   .quick-2
+   {
+    margin-left: -50px;
+    padding-left: 200px;
+    margin-top: -91px;
+   }
+
+   .feeds
+   {
+    margin-left: 50px;
+   }
+   .feeds h3
+   {
+     font-weight: bold;
+    font-size: 26px;
+    padding-bottom: 20px;
+   }
+
+   .feeds img
+   {
+    width: 90px;
+     border: solid 1px #fff;
+     background-color: #fff;
+    border-width: 7px 10px 5px 10px;
+   }
+
+   .news-letter
+   {
+    margin-right: 100px;
+   }
+
+   .news-letter h3
+   {
+    font-weight: bold;
+    font-size: 26px;
+    padding-bottom: 20px;
+   }
+
+   .news-letter input
+   {
+    padding: 18px;
+    width: 430px;
+    height: 48px;
+   }
+   
+   .sub-btn
+   {
+    margin-top: 20px;
+    color: #fff;
+    background-color: orangered;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 180px;
+    height: 47px;
+   }
+
+   .footer-3
+   {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+   }
+
+   .footer-img
+   {
+    margin-top: 20px;
+     margin-left: 170px;
+   }
+
+   .footer-logo
+   {
+    margin-top: 30px;
+    margin-right: 294px;
+    color: orangered;
+   }
+
+   .footer-logo i
+   {
+    border: 1px solid white;
+    background-color: #FFF;
+    border-width: 15px 34px 15px 12px;
+    border-radius: 50px;
+    padding-left: 5px;
+    font-size: 22px;
+    margin-left: 7px;
+   }
+
+   .copy-right
+   {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+   }
+
+      @media (max-width:600px)
+    {
+         header
+         {
+            flex-direction: column;
+            text-align: center;
+            width: 530px;
+         }
+        
+        .flag
+        {
+            flex-direction: column;
+            text-align: center
+        }
+
+        .about i,h5
+        {
+            display: none;
+        }
+
+        .head-icons
+        {
+            text-align: center;
+        }
+
+        .header
+        {
+            flex-direction: column;
+        }
+        
+        .logo
+        {
+            margin-left: -80px;
+            text-align: center;
+        }
+
+        nav
+         {
+            text-align: center;
+            flex-direction: column;
+            margin-left: -85px;
+         }
+
+        nav a
+        {
+            flex-direction: column;
+            display: block;
+            text-align: center;
+            width: 210px;
+            height: 50px;
+            margin-left: 230px;
+            padding: 6px;
+        }
+
+        .active
+        {
+            width: 210px;
+            height: 50px;
+            margin-left: 230px;
+            border-width: 10px 2px 10px 2px;
+        }
+       
+        .nav-btn
+        {
+            flex-direction: column;
+            text-align: center;
+            margin-left: 167px;
+        }
+
+        .hero-contant
+        {
+            margin-top: -410px;
+            flex-direction: column;
+            margin-left: -88px; 
+        }
+
+        .hero-contant h1
+        {
+            font-weight: bold;
+            padding: 6px;
+            font-size: 38px;
+            text-align: justify;
+            margin-left: -120px;
+        }
+
+        .contact-btn
+        {
+            width: 160px;
+            height: 60px;
+            margin-left: -177px;
+            font-weight: bold;
+            margin-top: -14px;
+            margin-left: -210px;
+        }
+
+        .about-btn
+        {
+            width: 160px;
+            height: 60px;
+            font-weight: bold; 
+            margin-top: -14px;
+        }
+
+        .loading
+        {
+            flex-direction: column;
+            margin-left: -560px;
+        }
+
+        .loading img
+        {
+            width: 82px;
+        }
+
+        .hero img
+        {
+            width: 527px;
+            height: 520px;
+        }
+
+        .service
+        {
+            margin-top: -29px;
+            flex-direction: column;
+            width: 490px;
+            margin-left: 17px;
+        }
+
+        .service-container
+        {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-1
+        {
+            display: block;
+            text-align: center;
+        }
+
+        .about-contant
+        {
+            display: block;
+            text-align: center;
+            margin-left: -160px;
+            padding: 10px;
+        }
+
+         .about-contant h1
+         {
+            text-align: center;
+            margin-left: 120px;
+         }
+
+         .about-contant p
+         {
+            margin-left: 180px;
+            text-align: center;
+            flex-direction: column;
+            width: 450px;
+            text-align: justify;
+         }
+
+         .about-contant button
+         {
+            margin-left: 135px; 
+         }
+         .about-img img
+         {
+            margin-left: -20px;
+            width: 490px;
+            height: 520px;
+         }
+
+         .project
+        {
+            flex-direction: column;
+            padding-left:-20px;
+            text-align: center;
+            margin-right: 170px;
+        }
+
+        .project h1
+        {
+            margin-top: -20px;
+        }
+        .category
+        {
+            display: block;
+        }
+
+        .category h5
+        {
+            margin-bottom: 35px;
+        }
+
+        .project-container
+        {
+            flex-direction: column;
+            text-align: center;
+            margin-left: -78px;
+        }
+
+        .project-img-2
+        {
+            margin-left:160px;
+        }
+
+        .project-img-2 p
+        {
+            margin-left: -12px;
+            font-size: 17px;
+        }
+
+        .project-img-3
+        {
+            margin-left:160px;
+        } 
+
+        .next-icon
+        {
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        .testimonials
+        {
+            flex-direction: column;
+            text-align: center; 
+            display: block;
+            margin-top: 10px;
+            width: 510px;
+            margin-left: 14px;
+        }
+
+         .testimonials img
+         {
+            width: 110px;
+            margin-left: -380px;
+         }
+
+         .load-2
+         {
+            display: none;
+         }
+
+        .test-con
+        {
+            margin-left: 28px;
+            height: 540px;  
+            width: 470px;
+            margin-top: -220px;
+        } 
+        
+         .test-con h1
+         {
+             text-align: center;
+             margin-left: 10px;
+         }
+
+          .test-con h5
+          {
+             text-align: center;
+             margin-left: 10px;
+          }
+
+           .test-con p
+           {  
+             margin-left: 100px;
+             width: 310px;
+           }
+
+           .projects h1
+           {
+             margin-left: 16px;
+           }
+
+            .project-content img
+            {
+               width: 190px;
+               margin-left: -324px;
+               margin-bottom: 30px;
+            }
+
+           .project-content h4
+           {
+               margin-left: -324px;
+           }
+
+           .project-content p
+           {
+               margin-left: -328px;
+               text-align: start;
+               width: 490px;
+               text-align: justify;
+           }
+
+           .why-btn
+           {
+               flex-direction: column;
+               text-align: center;
+               margin-left: 170px;
+           }
+
+           .contact-us
+           {
+               flex-direction: column;
+               text-align: center;
+           }
+
+           .contact-form h1
+           {
+               margin-left:-410px;
+               font-weight: bolder;
+               font-size: 36px;
+           }
+
+           .contact-form input
+           {
+               width: 470px;
+               margin-left: -140px;
+           }
+
+           .form-btn
+           {
+               margin-left: -424px;
+           }
+
+           .map iframe
+           {
+              margin-left: -20px;
+              width: 480px;
+           }
+
+           .footer
+           {
+              flex-direction: column;
+              margin-left: 18px;
+              width: 510px;
+              height: 1180px;
+           }
+
+           .footer-1
+           {
+              flex-direction: column;
+              margin-left: 10px;
+           }
+
+           .footer-1 i
+           {
+              margin-left: -70px;
+           }
+
+           .location-icon i
+           {
+              margin-left: -15px;
+           }
+
+           .footer-2
+           {
+              flex-direction: column;
+              margin-top: 40px;
+              margin-left: -30px;
+           }
+
+           .quick,.feeds,.news-letter
+           {
+              margin-left: 40px;
+              padding-bottom: 30px;
+              margin-top: 10px;
+           }
+
+           .news-letter input
+           {
+              width: 480px;
+           }
+
+           .footer-3
+           {
+              display: block;
+              text-align: start;
+           }
+
+           .footer-img,.footer-logo
+           {
+              margin-left: 10px;
+              width: 320px;
+           }
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="flag">
+            <img src="images/constrution/flag-uk.png" height="42px">
+            <p>English</p>
+        </div>
+        <div class="about">
+            <h5><i class="fa-solid fa-phone"></i>call:+01 123455678990</h5>
+            <h5><i class="fa-solid fa-envelope"></i>Email:san@gmail.com</h5>
+            <h5><i class="fa-solid fa-location-dot"></i>Location</h5>
+        </div>
+        <div class="head-icons">
+            <div class="face"><i class="fa-brands fa-facebook-f"></i></div>
+            <div class="twitter"><i class="fa-brands fa-twitter"></i></div>
+            <div class="link"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+    </header>
+
+    <section class="header">
+        <div class="logo">
+            <img src="images/constrution/logo (1).png" alt="">
+        </div>
+        <nav>
+            <a href="#" class="active">HOME</a>
+            <a href="#">SERVICE</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PROJECT</a>
+            <a href="#">TESTIMONIAL</a>
+            <a href="#">CONTACT US</a>
+            <a href="#">LOGIN</a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </nav>
+        <button class="nav-btn">GET A QUOTE</button>
+    </section>
+    <br>
+    <section class="hero-section">
+        <div class="hero">
+            <img src="images/constrution/slider-bg.jpg" alt="" width="100%">
+        </div>
+        <div class="hero-contant">
+            <h1>ARCHITECT </h1>
+            <h1>BUILDER CONSTRUTION </h1>
+            <h1>SERVICE</h1>
+        </div>
+        <div class="hero-btn">
+            <button class="contact-btn">Contact Us</button>
+            <button class="about-btn">About Us</button>
+        </div>
+        <div class="loading">
+            <img src="images/constrution/Frame 27 (1).png" alt="" width="150px">
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+    <br><br><br><br>
+
+    <section class="service">
+        <h1>services</h1>
+        <p>there are many variations ofpassages of lorem ipsum avaliable,but the majority have suffered alteration</p>
+        <div class="service-container">
+            <div class="service-box">
+                <img src="images/constrution/s1.png" alt="">
+                <h2>CONSTRUCTION SERVICE</h2>
+                <p>fact that a reader will distracted</p>
+                <p>by the readable contant of a page</p>
+                <p>when looking at its layout.the point</p>
+                <p>of using L</p>
+                <h6>Read More</h6>
+            </div>
+
+            <div class="service-box">
+                <img src="images/constrution/s2.png" alt="">
+                <h2>CONSTRUCTION SERVICE</h2>
+                <p>fact that a reader will distracted</p>
+                <p>by the readable contant of a page</p>
+                <p>when looking at its layout.the point</p>
+                <p>of using L</p>
+                 <h6>Read More</h6>
+            </div>
+
+            <div class="service-box">
+                <img src="images/constrution/s3.png" alt="">
+                <h2>CONSTRUCTION SERVICE</h2>
+                <p>fact that a reader will distracted</p>
+                <p>by the readable contant of a page</p>
+                <p>when looking at its layout.the point</p>
+                <p>of using L</p>
+                 <h6>Read More</h6>
+            </div>
+
+            <div class="service-box">
+                <img src="images/constrution/s4.png" alt="">
+                <h2>CONSTRUCTION SERVICE</h2>
+                <p>fact that a reader will distracted</p>
+                <p>by the readable contant of a page</p>
+                <p>when looking at its layout.the point</p>
+                <p>of using L</p>
+                 <h6>Read More</h6>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-1">
+        <div class="about-contant">
+            <h1>About Us</h1><br>
+            <p>there are many variation of passanger of lorame ipsum avalible.but the
+            majority have suffered aliteration in some form,by injectiion humoeu
+            there are many variation of passanger of lorame ipsum avalible.but the
+            majority have suffered aliteration in some form,by injectiion humoeu<br>
+            <button> read more</button>
+        </div>
+        <div class="about-img">
+            <img src="images/constrution/about-img.jpg" alt="" width="620px" height="390px">
+        </div>
+    </section>
+
+    <section class="project">
+        <h1>projects</h1>
+        <div class="category">
+            <h5>CATEGORY FILTER</h5>
+            <span>ALL</span>
+            <p>PAINTING</p>
+            <p>RECONSTRUCTION</p>
+            <P>REPAIRS</P>
+            <p>RESIDENITAL</p>
+            <p>STYLING</p>
+        </div>
+        <div class="project-container">
+        <div class="project-img">
+            <img src="images/constrution/project1.jpg" alt="" width="390px">
+        </div>
+        <div class="project-img-2">
+            <img src="images/constrution/project2.jpg" alt="" width="390px">
+            <h3>Interior work</h3>
+            <p>alteration in some form,by injiction humour, or randomised words which don't look even slightly believable.if you are going to use</p>
+            </div>
+            
+        <div class="project-img-3">  
+            <img src="images/constrution/project1.jpg" alt="" width="390px">
+        </div>
+        </div>
+        <div class="next-icon">
+        <i class="fa-solid fa-less-than"></i>
+        <i class="fa-solid fa-greater-than"></i>
+        </div>
+    </section>
+    <br><br><br><br><br>
+
+    <section class="testimonials">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="test-img">
+         <h1>TESTIMONIAL</h1>
+         <img src="images/constrution/client.jpg" alt=""> </div>
+         <div class="test-con">
+            <h1>MOROJINK</h1>
+            <h5>CUSTOMER</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea ab veniam tempora vero laborum facere quam quod a illo nulla magni accusantium dignissimos autem, omnis adipisci iure doloremque aliquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum exercitationem, facere dolorum odio sunt similique sed nobis nam quasi accusantium eos suscipit facilis, dolor alias delectus officiis nesciunt voluptatem sit.</p>
+         </div>
+        </div>
+    </section>
+
+     <div class="load-2">
+            <img src="images/constrution/Frame 27 (1).png" alt="">
+         </div>
+
+         <section class="projects">
+            <h1>Why Choose Us</h1>
+            <div class="project-content">
+                <img src="images/constrution/w1.png" alt="">
+                <h4>Project done on time</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In optio alias ipsa odit tempora eligendi, sed mollitia incidunt quisquam excepturi. Qui sint rem beatae odit iusto non similique quae corporis!lorame Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus id reiciendis exercitationem consectetur sequi quasi, excepturi vero quaerat incidunt ipsum autem, consequuntur inventore modi commodi a iste. Maxime, perferendis.</p>
+            </div>
+                    
+            <div class="project-content">
+                <img src="images/constrution/w2.png" alt="">
+                <h4>Project done on time</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In optio alias ipsa odit tempora eligendi, sed mollitia incidunt quisquam excepturi. Qui sint rem beatae odit iusto non similique quae corporis!lorame Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus id reiciendis exercitationem consectetur sequi quasi, excepturi vero quaerat incidunt ipsum autem, consequuntur inventore modi commodi a iste. Maxime, perferendis.</p>
+            </div>
+
+            <div class="project-content">
+                <img src="images/constrution/w3.png" alt="" >
+                <h4>Project done on time</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In optio alias ipsa odit tempora eligendi, sed mollitia incidunt quisquam excepturi. Qui sint rem beatae odit iusto non similique quae corporis!lorame Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus id reiciendis exercitationem consectetur sequi quasi, excepturi vero quaerat incidunt ipsum autem, consequuntur inventore modi commodi a iste. Maxime, perferendis.</p>
+            </div>
+            <button class="why-btn">Read More</button>
+        </section>
+        <br><br><br>
+
+         <section class="contact-us">
+         <div class="contact-form">
+            <h1>CONTACT US</h1>
+            <form>
+            <input type="text" placeholder="Your Name" pattern="[A-Za-z]{6,}" required/><br>
+            <input type="" placeholder="Phone Number" pattern="[1-9]{4,}" required/><br>
+            <input type="email" placeholder="Email"><br>
+            <input class="form-message" type="text" placeholder="Message" pattern="[A-Za-z]{5,}"/><br>
+             <div class="form-btn"><input type="submit"  value="SEND" class="form-btn"></div> 
+             <!-- <button type="button" class="form-btn">send</button> -->
+            </form>
+                 
+         </div>
+         <div class="map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31308.060409113175!2d78.14723020223215!3d11.224025185293405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babce5e3f22014f%3A0xa0ab89ef32c34a77!2sNamakkal%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1761905510206!5m2!1sen!2sin" width="800" height="430" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+         </section>  
+         <br><br>
+
+        <footer class="footer">
+            <div class="footer-1">
+                <div>
+                <i class="fa-solid fa-phone"></i>
+                <p>call:+0123456789</p>
+                </div>
+                <div >
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email:san@gmail.com</p>
+                </div>
+                <div  class="location-icon">
+                 <i class="fa-solid fa-location-dot"></i>
+                <p>location</p>
+                </div>
+            </div>
+
+            <div class="footer-2">
+                <div class="quick">
+                    <h3>QUICK LINK</h3>
+                    <p>Home</p>
+                    <P>About</P>
+                    <P>Testimonial</P>
+                
+                <div class="quick-2">
+                    <p>Service</p>
+                    <p>Project</p>
+                    <p>Contact Us</p>
+                </div>
+                </div>
+            
+
+             <div class="feeds">
+                <h3>INSTAGRAM FEED</h3>
+                <img src="images/constrution/instagram.jpg" alt="">
+                <img src="images/constrution/instagram.jpg" alt="">
+                <img src="images/constrution/instagram.jpg" alt="">
+            <div>
+                <img src="images/constrution/instagram.jpg" alt="">
+                <img src="images/constrution/instagram.jpg" alt="">
+                <img src="images/constrution/instagram.jpg" alt="">
+            </div>   
+            </div>
+
+            <div class="news-letter">
+                <h3>SIGN UP TO OUR NEWSLETTER</h3>
+                <input type="email" placeholder="Enter Your Email"><br>
+                <button class="sub-btn">Subscribe</button>
+            </div>
+           </div>  
+           
+           <div class="footer-3">
+            <div class="footer-img">
+             <img src="images/constrution/logo2.png" alt="">
+            </div>
+
+        <div class="footer-logo">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        </footer>
+        <div class="copy-right">
+        <p>© 2025 All Rights Reserved By Free Html Templates</p>
+        </div>
+</body>
+</html>
