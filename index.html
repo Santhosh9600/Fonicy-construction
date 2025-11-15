@@ -790,19 +790,21 @@
     font-weight: bold;
    }
 
-      @media (max-width:600px)
+    @media (max-width:600px)
     {
          header
          {
             flex-direction: column;
             text-align: center;
             width: 530px;
+            display: none;
          }
         
         .flag
         {
             flex-direction: column;
-            text-align: center
+            text-align: center;
+            display: none;
         }
 
         .about i,h5
@@ -813,6 +815,7 @@
         .head-icons
         {
             text-align: center;
+            display: none;
         }
 
         .header
@@ -1113,9 +1116,11 @@
                margin-left: -140px;
            }
 
-           .form-btn
+           .form-btn input
            {
-               margin-left: -424px;
+               /* margin-left: -124px; */
+               width: 220px;
+               height: 49px;
            }
 
            .map iframe
