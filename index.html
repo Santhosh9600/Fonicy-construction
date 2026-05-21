@@ -69,11 +69,14 @@
         }
 
         .about i {
-            border: solid 1px #fff;
             background-color: #fff;
             color: orangered;
-            padding: 6px 8px;
-             border-width: 6px 16px 2px 9px;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 38px;
         }
 
         .head-icons {
@@ -84,10 +87,13 @@
         }
 
         .head-icons > div {
-            border: solid 1px black;
             background-color: #fff;
-            border-width: 6px 8px;
             border-radius: 3px;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -950,16 +956,21 @@
    @media (max-width: 992px) {
     header {
         text-align: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .flag,
     .head-icons {
-        width: 100%;
         justify-content: center;
     }
 
     .about {
-        width: 100%;
+        width: fit-content;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .hero img {
@@ -1039,18 +1050,21 @@
    @media (max-width: 768px) {
     header {
         margin-top: 0;
-        padding: 14px;
+        padding: 20px 14px;
+        gap: 16px;
     }
 
     .about h5 {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
         font-size: 15px;
+        text-align: left;
     }
 
     .about i {
-        border-width: 4px 8px;
-        padding: 5px 6px;
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
     }
 
     .header {
@@ -1259,7 +1273,8 @@
     }
 
     .head-icons > div {
-        border-width: 5px 7px;
+        width: 34px;
+        height: 34px;
     }
 
     .logo img {
